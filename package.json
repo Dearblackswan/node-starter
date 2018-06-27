@@ -6,8 +6,8 @@
   "scripts": {
     "eslint": "eslint \"./**/*.js\"",
     "lint": "npm run lint",
-    "start:dev": "nodemon --watch views --watch src --watch public -e js,twig,html,css server.js",
-    "start:dep": "ENV=deployment node server.js",
+    "start:dev": "nodemon --watch index.js",
+    "start:dep": "ENV=deployment node index.js",
     "start": "npm run start:dev",
     "test": "mocha --compilers js:babel-core/register",
     "todo": "leasot ./src/**/*.js server.js --tags error,info || true"
@@ -23,10 +23,6 @@
   "engines": {
     "node": "4.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikeerickson/node-express-es6-starter.git"
-  },
   "keywords": [
     "node",
     "heroku",
@@ -41,7 +37,6 @@
       "node_modules"
     ]
   },
-  "author": "Mike Erickson <codedungeon@mail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -53,12 +48,6 @@
     "nodemon": "1.11.0",
     "todo-webpack-plugin": "1.5.1"
   },
-  "bugs": {
-    "url": "https://github.com/mikeerickson/node-express-es6-starter/issues"
-  },
-  "homepage": "https://github.com/mikeerickson/node-express-es6-starter#readme",
-  "directories": {
-    "test": "test"
-  },
+
   "reveal": true
 }
