@@ -18,6 +18,12 @@ app.listen(port, () => {
 });
 
 app.post('/notes', (req, res) => {
-  console.log(req.body)
-  res.sendStatus(200)
+  let payload = req.body;
+  
+  let val1 = payload['val1'];
+  let val2 = payload['val2'];
+
+  let result = val1 + val2;
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(result));
 });
